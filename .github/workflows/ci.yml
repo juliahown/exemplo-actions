@@ -5,14 +5,14 @@ on:
     branches:
       - main
       - develop
-    types: [ opened, reopened ]
+    types: [opened, reopened]
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    needs: build
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
